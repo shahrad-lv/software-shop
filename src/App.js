@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Footer from './components/layout/Footer';
-import Header from './components/layout/Header';
+import Header from './components/layout/Header/Header';
 import Navbar from './components/layout/Navbar/Navbar';
 import Services from './components/layout/Services';
 import Skills from './components/layout/Skills';

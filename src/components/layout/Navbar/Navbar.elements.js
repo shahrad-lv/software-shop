@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 export const Logo = styled.div`
     padding: .5rem;
-    z-index: 100000;
 `;
 
 export const ImgLogo = styled.img`
@@ -18,7 +17,7 @@ export const NavContainer = styled.nav`
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: #050b2b;
+    background: rgba(5, 11, 43);
 `;
 
 export const NavLink = styled(Link)`
