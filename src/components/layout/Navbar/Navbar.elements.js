@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { AppBar } from '@material-ui/core';
 
 export const Logo = styled.div`
     padding: .5rem;
+    flex-grow: 1;
 `;
 
 export const ImgLogo = styled.img`
@@ -33,4 +35,10 @@ export const NavLink = styled(Link)`
         font-weight: lighter;
         color: white;
         text-decoration: none;
+`;
+
+export const StyledAppBar = styled(AppBar)`
+        background:  transparent;
+        position: fixed;
+        z-index: 1000000;
 `;
