@@ -7,6 +7,8 @@ import Services from './components/layout/Services';
 import Skills from './components/layout/Skills';
 import Home from './components/layout/Home';
 import About from './components/layout/About';
+import { useSelector } from "react-redux";
+
 function App() {
   return (
     <BrowserRouter>
