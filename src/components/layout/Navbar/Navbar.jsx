@@ -6,7 +6,7 @@ import React from 'react'
 import NavLinks from './NavLinks'
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { navtoggle } from "../../../redux/store/NavbarReducer";
+import { navtoggle } from "../../../redux/Reducers/navbarReducer";
 
 
 const Navbar = () => {

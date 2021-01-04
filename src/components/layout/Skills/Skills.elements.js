@@ -14,6 +14,12 @@ export const GridContainer = styled(Grid)`
     display: flex;
     flex-wrap: wrap;
 `;
+
+export const GridItem = styled(Grid)`
+    padding: 30px 0;
+`;
+
+
 export const Title = styled(Typography)`
     color: #000;
     margin: 6rem 0;
@@ -32,7 +38,7 @@ export const SkillMedia = styled(CardMedia)`
 `;
 
 export const SkillContent = styled(CardContent)`
-    
+
 `;
 
 export const SkillTitle = styled(Typography)`

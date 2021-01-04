@@ -2,18 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import GlobalStyle from './theme/globalStyle';
-import { Provider } from "react-redux";
-import rootReducer from "./redux/rootReducer";
+import rootReducer from "./redux/store/rootReducer";
 import { StylesProvider } from '@material-ui/core';
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk';
+import { getFirebase, ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import { createStore, applyMiddleware } from 'redux'
+import firebase from './config/firebaseConfig'
+import { createFirestoreInstance } from 'redux-firestore'
 
-const rootElement = document.getElementById("root");
+const store = createStore (rootReducer, applyMiddleware(thunk.withExtraArgument({getFirebase})) ) 
+
+const rrfProps = {
+  firebase,
+  config: {},
+  dispatch : store.dispatch,
+  createFirestoreInstance
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <Provider store={rootReducer}>
+    <Provider store={store}>
+    <ReactReduxFirebaseProvider {...rrfProps}>
     <StylesProvider injectFirst>
       <App />
     </StylesProvider>
+    </ReactReduxFirebaseProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
