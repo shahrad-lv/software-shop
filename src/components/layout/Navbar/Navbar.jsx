@@ -38,7 +38,7 @@ const Navbar = () => {
                 </Toolbar>
             </StyledAppBar>
 
-            <SwipeableDrawer anchor={anchor} open={top}>
+            <SwipeableDrawer anchor={anchor} open={top} onClose={toggleDrawer(anchor, false)} onOpen={toggleDrawer(anchor, true)}>
               <NavLinks/>
             </SwipeableDrawer>
 

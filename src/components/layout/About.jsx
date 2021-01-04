@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header/Header'
 import Services from './Services'
-import Skills from './Skills'
+import Skills from './Skills/Skills'
 
 const About = () => {
     return (
