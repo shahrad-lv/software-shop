@@ -2,12 +2,22 @@ import styled from 'styled-components';
 import { Typography } from '@material-ui/core'
 
 export const HeaderContainer = styled.div`
-
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(360deg,#050b2b,transparent);
+        pointer-events: none;
+        z-index: 1000000000000000000000000000;
+    }
 `;
 
 export const DistortionContainer = styled.div`

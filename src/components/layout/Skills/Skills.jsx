@@ -8,7 +8,6 @@ import { firestoreConnect } from 'react-redux-firebase';
 const Skills = () => {
 
   const skills = useSelector(state => state.firestore.ordered.skills);
-  console.log(skills)
     return (
       <SkillsContainer>
       <Title variant='h4' component="h4">Why choose us?</Title>

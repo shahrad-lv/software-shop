@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle `
       padding: 0;
       font-family: IRANSansWeb_Light !important;
     }
+    .MuiTabs-flexContainer{
+      justify-content: center;
+
+    }
 `;
  
 export default GlobalStyle;
