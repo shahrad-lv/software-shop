@@ -21,8 +21,7 @@ export const GridItem = styled(Grid)`
 
 
 export const Title = styled(Typography)`
-    color: #000;
-    margin: 6rem 0;
+    margin: 5rem 0;
 `;
 
 export const SkillContainer = styled(Card)`

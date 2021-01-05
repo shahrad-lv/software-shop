@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import IRANSansWeb_Light from './IRANSansWeb_Light.woff';
-
+import theme from '../theme/material-ui.theme'
 const GlobalStyle = createGlobalStyle `
     @font-face {
         font-family: 'IRANSansWeb_Light';
@@ -16,6 +16,17 @@ const GlobalStyle = createGlobalStyle `
     .MuiTabs-flexContainer{
       justify-content: center;
 
+    }
+    .MuiTabs-flexContainer{
+      justify-content: space-around;
+      width: 70%;
+      height: 200px;
+      margin: 0 auto;
+    }
+    .MuiTabs-indicator	{
+      height: 4px;
+      border-radius: 5px 5px 0 0 ;
+      box-shadow: 0 0 15px ${(props) => theme.palette.secondary.main}, 0 0 5px ${(props) => theme.palette.secondary.light}, 0 0 15px ${(props) => theme.palette.secondary.main};
     }
 `;
  
