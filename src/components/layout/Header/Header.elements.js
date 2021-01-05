@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    &::before{
+    /* &::before{
         content: '';
         position: absolute;
         bottom: 0;
@@ -17,7 +17,7 @@ export const HeaderContainer = styled.div`
         background: linear-gradient(360deg,#050b2b,transparent);
         pointer-events: none;
         z-index: 1000000000000000000000000000;
-    }
+    } */
 `;
 
 export const DistortionContainer = styled.div`

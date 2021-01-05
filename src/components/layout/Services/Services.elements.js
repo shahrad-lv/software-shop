@@ -26,6 +26,9 @@ export const TabIcon = styled.img`
 
 export const StyledTabPanel = styled.div`
     direction: rtl;
-    width: 80%;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    min-height: 250px;
     margin: 0 auto;
 `;
