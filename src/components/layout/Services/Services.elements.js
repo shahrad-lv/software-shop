@@ -4,6 +4,7 @@ import theme from '../../../theme/material-ui.theme'
 
 export const Title = styled(Typography)`
     margin: 5rem 0;
+    color: #fff;
 `;
 
 export const GridContainer = styled(Grid)`
@@ -11,11 +12,12 @@ export const GridContainer = styled(Grid)`
 `;
 
 export const StyledAppBar = styled(AppBar)`
-    background: ${(props) => theme.palette.primary.main};
+    /* background: rgba(255); */
 `;
 
 export const StyledTab = styled(Tab)`
     font-size: 1.1rem;
+    color: ${(props) => theme.palette.secondary.main};
 `;
 
 export const TabIcon = styled.img`
@@ -31,4 +33,5 @@ export const StyledTabPanel = styled.div`
     align-items: center;
     min-height: 250px;
     margin: 0 auto;
+    color: #fff;
 `;

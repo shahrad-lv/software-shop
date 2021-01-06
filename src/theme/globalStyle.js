@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle `
     .MuiTabs-indicator	{
       height: 4px;
       border-radius: 5px 5px 0 0 ;
+      background: #fff;
       box-shadow: 0 0 15px ${(props) => theme.palette.secondary.main}, 0 0 5px ${(props) => theme.palette.secondary.light}, 0 0 15px ${(props) => theme.palette.secondary.main};
     }
 `;

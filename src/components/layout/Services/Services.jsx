@@ -59,7 +59,7 @@ const Services = () => {
         </Grid>
         <Grid item lg={12}>
         <StyledAppBar position="static" elevation={0} >
-            <Tabs value={value} onChange={handleChange} variant="scrollable" scrollButtons="on" indicatorColor="secondary" aria-label="Tabs">
+            <Tabs value={value} onChange={handleChange} variant="scrollable" scrollButtons="on" aria-label="Tabs">
                 {services && services.map(service => (
                     <StyledTab label={service.label} icon={<TabIcon src={service.imgSrc} />} {...a11yProps(service.id)}  />
                 ))}
