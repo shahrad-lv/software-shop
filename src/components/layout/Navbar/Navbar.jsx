@@ -32,7 +32,7 @@ const Navbar = () => {
                 <Logo>
                     <ImgLogo src='http://rozup.ir/view/3271192/Logo-vol1.png'/>
                 </Logo>
-                <IconButton edge="start" color="inherit" aria-label="menu" onClick={top ? toggleDrawer(anchor, false) : toggleDrawer(anchor, true)} style={{zIndex: 100000}}>
+                <IconButton edge="start" id='NavIcon' color="inherit" aria-label="menu" onClick={top ? toggleDrawer(anchor, false) : toggleDrawer(anchor, true)} style={{zIndex: 100000}}>
                     {top ? <CloseIcon fontSize='large' /> : <MenuIcon fontSize='large'/>}
                 </IconButton>
                 </Toolbar>

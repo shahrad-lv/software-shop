@@ -16,13 +16,19 @@ export const GridContainer = styled(Grid)`
 `;
 
 export const GridItem = styled(Grid)`
+    /* transform: translateY(400px); */
+    position: relative;
+    top: 200px;
     padding: 30px 0;
 `;
 
 
 export const Title = styled(Typography)`
     margin: 5rem 0;
-    color : ${(props) => theme.palette.primary.main};
+    position: relative;
+    top: 200px;
+    color: ${(props) => theme.palette.secondary.main};
+    /* color : ${(props) => theme.palette.primary.main}; */
 `;
 
 export const SkillContainer = styled(Card)`
