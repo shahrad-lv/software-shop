@@ -19,7 +19,7 @@ export const NavContainer = styled.nav`
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background: rgba(5, 11, 43);
+    background: #040925;
 `;
 
 export const NavLink = styled(Link)`
@@ -40,5 +40,5 @@ export const NavLink = styled(Link)`
 export const StyledAppBar = styled(AppBar)`
         background:  transparent;
         position: fixed;
-        z-index: 1000000;
+        z-index: 1305;
 `;

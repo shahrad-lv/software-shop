@@ -8,25 +8,18 @@ import styled from 'styled-components'
 import  gsap  from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Bounce, Circ, Expo,Power4, Back, Elastic, Power2 } from 'gsap/gsap-core';
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 
 const AppProvider = styled.div`
     position: relative;
     z-index: 10;
-    /* background: #050B2B; */
+    background: #050b2b;
     margin-bottom: 100vh;
-    background: #fff;
 `;
-
-
-
-
-
 
 function App() {
 
-  // background
   useEffect(() => {
   
     ScrollTrigger.create({
@@ -189,9 +182,9 @@ function App() {
   }, []);
 
 
+
   return (
     <BrowserRouter>
-      <>
       <Navbar />
       <AppProvider id='background'>
         <Switch>
@@ -200,7 +193,6 @@ function App() {
         </Switch>
       </AppProvider>
       <Footer />
-      </>
     </BrowserRouter>
   );
 }

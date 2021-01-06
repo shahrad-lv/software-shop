@@ -29,6 +29,44 @@ const GlobalStyle = createGlobalStyle `
       background: #fff;
       box-shadow: 0 0 15px ${(props) => theme.palette.secondary.main}, 0 0 5px ${(props) => theme.palette.secondary.light}, 0 0 15px ${(props) => theme.palette.secondary.main};
     }
+
+.load-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1310;
+  pointer-events: none;
+}
+
+/* .load-screen {
+  position: relative;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #040925;
+  width: 0%;
+  height: 100%;
+} */
+
+.load-screen1 {
+  position: relative;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #040925;
+
+  width: 100%;
+  height: 0%;
+}
+
+.faded {
+  opacity: 0;
+  pointer-events: none;
+}
+
 `;
  
 export default GlobalStyle;

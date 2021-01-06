@@ -17,9 +17,22 @@ export const HeaderContainer = styled.div`
         height: 150px;
         background: linear-gradient(360deg,#050b2b,transparent);
         pointer-events: none;
-        z-index: 1000000000000000000000000000;
+        z-index: 1;
     }
 `;
+export const PageNameLine = styled.div`
+    margin-bottom: 65px;
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+`;
+
+export const Line = styled.div`
+    height: 75px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+`; 
 
 export const DistortionContainer = styled.div`
     position: absolute;
@@ -51,8 +64,14 @@ export const Title = styled(Typography)`
     margin-bottom: -20px;
 `;
 
-export const Description = styled(Typography)`
+export const DescriptionLine = styled.div`
+    height: 60px;
+    position: relative;
+    overflow: hidden;
     margin-top: 5rem;
+`;
+
+export const Description = styled(Typography)`
     color: #fff;
     line-height: 35px;
     color: rgba(255,255,255, 0.7);
