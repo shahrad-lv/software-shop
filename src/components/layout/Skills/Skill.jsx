@@ -8,7 +8,7 @@ const Skill = ({skill}) => {
 
     return (
 
-            <GridItem xs={12} sm={6} md={4}>
+            <GridItem xs={12} sm={6} md={4} className='SkillItmes'>
             <SkillContainer elevation={0}>
                 <SkillMedia image={imgSrc} title={title}/>
 

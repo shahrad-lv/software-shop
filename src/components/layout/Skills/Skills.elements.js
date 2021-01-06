@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 import { Card, CardContent, CardMedia, Grid, Typography } from '@material-ui/core'
-
+import theme from '../../../theme/material-ui.theme'
 export const SkillsContainer = styled(Grid)`
     display: flex;
     flex-direction: column;
@@ -22,12 +22,14 @@ export const GridItem = styled(Grid)`
 
 export const Title = styled(Typography)`
     margin: 5rem 0;
+    color : ${(props) => theme.palette.primary.main};
 `;
 
 export const SkillContainer = styled(Card)`
     max-width: 345px;
     margin: 0 auto;
     text-align: center;
+    background: transparent;
 `;
 
 export const SkillMedia = styled(CardMedia)`
@@ -37,7 +39,7 @@ export const SkillMedia = styled(CardMedia)`
 `;
 
 export const SkillContent = styled(CardContent)`
-
+    background: transparent;
 `;
 
 export const SkillTitle = styled(Typography)`

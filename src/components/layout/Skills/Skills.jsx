@@ -9,8 +9,8 @@ const Skills = () => {
 
   const skills = useSelector(state => state.firestore.ordered.skills);
     return (
-      <SkillsContainer>
-      <Title variant='h4' component="h4">Why choose us?</Title>
+      <SkillsContainer id='skills'>
+      <Title id='SkillTitle' variant='h4' component="h4">Why choose us?</Title>
       <GridContainer>
         {skills && skills.map(skill => (
           <Skill skill={skill} key={skill.id}/>
