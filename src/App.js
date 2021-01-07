@@ -6,17 +6,11 @@ import Home from './components/layout/Home';
 import About from './components/layout/About';
 import styled from 'styled-components'
 import  gsap  from 'gsap';
+import { AppProvider } from './theme/globalStyle'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Bounce, Circ, Expo,Power4, Back, Elastic, Power2 } from 'gsap/gsap-core';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const AppProvider = styled.div`
-    position: relative;
-    z-index: 10;
-    background: #050b2b;
-    margin-bottom: 100vh;
-`;
 
 function App() {
 

@@ -29,7 +29,7 @@ const Navbar = () => {
 
             <StyledAppBar position='static' elevation={0}>
                 <Toolbar>
-                <Logo>
+                <Logo id='logo'>
                     <ImgLogo src='http://rozup.ir/view/3271192/Logo-vol1.png'/>
                 </Logo>
                 <IconButton edge="start" id='NavIcon' color="inherit" aria-label="menu" onClick={top ? toggleDrawer(anchor, false) : toggleDrawer(anchor, true)} style={{zIndex: 100000}}>
