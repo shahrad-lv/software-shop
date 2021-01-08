@@ -1,13 +1,16 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Description, DistortionContainer, Line, DescriptionLine, PageNameLine, HeaderContainer, HeaderContent, PageName, Title } from './Header.elements'
 import displacement from './images/displacement.jpg'
 import compostions1 from './images/compostions1.jpg'
-import compostions2 from './images/compostions2.jpg'
-import compostions3 from './images/compostions3.jpg'
+import Home from './images/Home.jpg'
+import Shop from './images/Shop.jpg'
 import hoverEffect from 'hover-effect'
 import gsap, { Power4 } from 'gsap/gsap-core'
+import { useLocation } from 'react-router-dom'
 
-const Header = ({pagename}) => {
+const Header = () => {
+    const location = useLocation();
+    const [name, setName] = useState(location.pathname)
 
     const container = useRef();
 
@@ -16,7 +19,7 @@ const Header = ({pagename}) => {
           parent: container.current,
           intensity: 1,
           image1: compostions1,
-          image2: pagename === 'Home' ? compostions3 : compostions2,
+          image2: name  == '/' ? Home : name == '/shop' ? Shop : Home,
           displacementImage: displacement,
           imagesRatio: .55,
           speedIn: .9,
@@ -35,10 +38,11 @@ const Header = ({pagename}) => {
     }, []);
       
     return (
+
         <HeaderContainer>
             <DistortionContainer id="imgContainer" ref={container} />
             <HeaderContent>
-                <PageNameLine><PageName className='HeaderTitle'> {pagename} Page  </PageName></PageNameLine>
+                <PageNameLine><PageName className='HeaderTitle'> {name  == '/' ? 'Home' : name == '/about' ? 'About' : 'Shop'} Page  </PageName></PageNameLine>
                 <Line><Title className='HeaderTitle'>React</Title></Line>
                 <Line><Title className='HeaderTitle'>Software Shop</Title></Line>
                 <DescriptionLine>

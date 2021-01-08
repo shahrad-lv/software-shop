@@ -12,7 +12,7 @@ const NavLinks = () => {
     return (
         <NavContainer >
             <NavLink onClick={handleClose} to='/'>خانه</NavLink>
-            <NavLink>نرم افزار</NavLink>
+            <NavLink onClick={handleClose} to='/shop'>فروشگاه نرم افزار</NavLink>
             <NavLink>آموزش ها</NavLink>
             <NavLink onClick={handleClose} to='/about'>درباره ما</NavLink>
             <NavLink>حساب کاربری</NavLink>
