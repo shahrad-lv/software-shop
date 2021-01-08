@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import Barba from './Barba-effect/Barba';
 import { Faded } from '../../theme/globalStyle'
-import About from './About';
-import Shop from './Shop';
 import Products from './Products/Products';
+import Header from './Header/Header';
 
-const Home = () => {
+const Shop = () => {
 
     return (
       <>
-      <Barba pagename={'خانه | Home'}/>
+      <Barba pagename={'فروشگاه | Shop'}/>
         <Faded>
-          <About />
-          <Products />
+            <Header />
+            <Products />
         </Faded>
       </>
     )
 }
 
-export default Home
+export default Shop

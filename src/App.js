@@ -6,7 +6,7 @@ import Home from './components/layout/Home';
 import About from './components/layout/About';
 import styled from 'styled-components'
 import { AppProvider } from './theme/globalStyle'
-import Shop from './components/layout/Shop/Shop';
+import Shop from './components/layout/Shop';
 
 
 

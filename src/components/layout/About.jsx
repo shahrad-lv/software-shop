@@ -7,7 +7,6 @@ import { Faded } from '../../theme/globalStyle'
 import  gsap  from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Bounce, Circ, Expo,Power4, Back, Elastic, Power2 } from 'gsap/gsap-core';
-import { useDispatch } from 'react-redux'
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
