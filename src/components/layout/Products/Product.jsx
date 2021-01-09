@@ -1,23 +1,30 @@
 
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { AddToCart ,InfoName, InfoPrice, ProductContainer, ProductImg, ProductInfo } from './Product.elements';
+import { addCart } from "../../../redux/Actions/productAction";
 
+const Product = ({product}) => {
 
-export default function MediaCard({product}) {
-  const {ProductName , ProductPic, ProductPrice, type} = product
-
+  const dispatch = useDispatch();
+  const handleAdd = product => {
+    dispatch(addCart(product))
+  }
+  
   return (
     <ProductContainer>
-        <ProductImg src={ProductPic} alt=""/>
+        <ProductImg src={product.ProductPic} alt=""/>
       <ProductInfo>
       <InfoPrice>
-          {ProductPrice}
+          {product.ProductPrice}
         </InfoPrice>
         <InfoName>
-          {ProductName}
+          {product.ProductName}
         </InfoName>
         </ProductInfo>
-        <AddToCart variant='outlined' color='secondary'> افزودن به سبد خرید</AddToCart>
+        <AddToCart onClick={() => handleAdd(product)} variant='outlined' color='secondary'> افزودن به سبد خرید</AddToCart>
     </ProductContainer>
   );
 }
+
+export default Product

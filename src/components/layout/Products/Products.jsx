@@ -11,8 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Products = () => {
-    const products = useSelector(state => state.firestore.ordered.product);
 
+    const products = useSelector(state => state.firestore.ordered.product);
 
     const settings = {
       dots: false,
@@ -50,7 +50,7 @@ const Products = () => {
 
         <Slider {...settings}>
           {products && products.map(product => (
-          <Product product={product} key={product.type}/>
+          <Product product={product} key={product.id}/>
           ))}
         </Slider>
         
