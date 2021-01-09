@@ -30,9 +30,32 @@ const GlobalStyle = createGlobalStyle `
       background: #fff;
       box-shadow: 0 0 15px ${(props) => theme.palette.secondary.main}, 0 0 5px ${(props) => theme.palette.secondary.light}, 0 0 15px ${(props) => theme.palette.secondary.main};
     }
+    .slick-slide {
+     transition: all ease-in-out 1s;
+     opacity: .5;
+     cursor: grab;
+    }
+    .slick-slide:focus {
+     outline: none;
+    }
+    .slick-active {
+     opacity: .5;
+  }
+    .slick-current {
+     opacity: 1;
+    }
+
 `;
  
 export default GlobalStyle;
+
+
+
+
+
+
+
+
 
 export const AppProvider = styled.div`
     position: relative;
