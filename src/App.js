@@ -7,7 +7,7 @@ import About from './components/layout/About';
 import styled from 'styled-components'
 import { AppProvider } from './theme/globalStyle'
 import Shop from './components/layout/Shop';
-import Cart from './components/layout/Cart/Cart';
+import Cart from './components/layout/Cart';
 
 
 

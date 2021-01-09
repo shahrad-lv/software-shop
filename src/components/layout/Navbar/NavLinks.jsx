@@ -16,7 +16,7 @@ const NavLinks = () => {
             <NavLink>آموزش ها</NavLink>
             <NavLink onClick={handleClose} to='/about'>درباره ما</NavLink>
             <NavLink>حساب کاربری</NavLink>
-            <NavLink>سبد خرید</NavLink>
+            <NavLink onClick={handleClose} to='/cart'>سبد خرید</NavLink>
         </NavContainer>
     )
 }

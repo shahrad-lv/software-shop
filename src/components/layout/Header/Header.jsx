@@ -42,7 +42,7 @@ const Header = () => {
         <HeaderContainer>
             <DistortionContainer id="imgContainer" ref={container} />
             <HeaderContent>
-                <PageNameLine><PageName className='HeaderTitle'> {name  == '/' ? 'Home' : name == '/about' ? 'About' : 'Shop'} Page  </PageName></PageNameLine>
+                <PageNameLine><PageName className='HeaderTitle'> {name  == '/' ? 'Home' : name == '/about' ? 'About' : name == '/shop' ? 'Shop' : 'Cart'} Page  </PageName></PageNameLine>
                 <Line><Title className='HeaderTitle'>React</Title></Line>
                 <Line><Title className='HeaderTitle'>Software Shop</Title></Line>
                 <DescriptionLine>
