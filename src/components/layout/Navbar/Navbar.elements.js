@@ -35,6 +35,10 @@ export const NavLink = styled(Link)`
         font-weight: lighter;
         color: white;
         text-decoration: none;
+        svg{
+            font-size: 1.6rem;
+            margin-right: 10px;
+        }
 `;
 
 export const StyledAppBar = styled(AppBar)`

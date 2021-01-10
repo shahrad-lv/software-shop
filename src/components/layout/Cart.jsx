@@ -5,7 +5,7 @@ import CartProducts from './Cart/CartProducts';
 import Payment from './Cart/Payment'
 import Header from './Header/Header';
 import { Grid } from '@material-ui/core';
-import { GridContainer } from './Cart/Cart.elements';
+import { GridContainer, ItemContainer } from './Cart/Cart.elements';
 const Cart = () => {
 
     return (
@@ -14,13 +14,13 @@ const Cart = () => {
         <Faded>
         <Header />
         <GridContainer container>
-            <Grid item sm={1}/>
-            <Grid item container lg={10}>
-                    <Payment />
-                    <Grid item sm={1} />
-                    <CartProducts />
-            </Grid>
-            <Grid item sm={1}/>
+            <Grid item xs={1}/>
+            <ItemContainer item  xs={12} md={10}>
+                <CartProducts />
+                <Grid item xs={1}/>
+                <Payment />
+            </ItemContainer>
+            <Grid item xs={1} />
         </GridContainer>
         </Faded>
       </>

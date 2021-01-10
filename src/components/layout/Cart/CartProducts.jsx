@@ -7,9 +7,8 @@ import { ProductItem } from './Cart.elements';
 
 const CartProducts = () => {
     const products = useSelector(state => state.firestore.ordered.product);
-    
     return (
-        <ProductItem item sm={8}>
+        <ProductItem item md={8} xs={12}>
           {products && products.map(product => (
                 product.InCart && (
                   <CartProduct product={product} key={product.id}/>
@@ -23,7 +22,7 @@ export default compose(
     firestoreConnect(ownProps => [
       {
         collection: "product",
-        orderBy: ['InCart']
+        orderBy: ['InCart'],
       }
     ])
   )(CartProducts)

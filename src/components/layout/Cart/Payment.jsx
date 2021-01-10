@@ -4,7 +4,7 @@ import { PaymentItem } from './Cart.elements'
 const Payment = () => {
 
     return (
-        <PaymentItem item lg={3} style>
+        <PaymentItem item md={3} xs={12} style>
             Payment
         </PaymentItem>
     )
