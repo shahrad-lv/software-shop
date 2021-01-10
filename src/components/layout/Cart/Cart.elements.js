@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, ButtonGroup, Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components'
 
 export const GridContainer = styled(Grid)`
@@ -69,8 +69,21 @@ export const ProductCount = styled(Typography)`
 export const ProductDelete = styled(Button)`
     border-radius: 0;
     padding: 6px 22px;
+    margin-left: 2rem;
 `;
+
+export const ProductIncrease = styled(Button)`
+    border-radius: 0;
+    padding: 6px 18px;
+`;
+export const ProductDecrease = styled(Button)`
+    border-radius: 0;
+    padding: 6px 18px;
+`;
+
 
 export const ProductActions = styled.div`
     margin-top: 3rem;
+    display: flex;
+
 `;
