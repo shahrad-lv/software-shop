@@ -1,9 +1,16 @@
+// Home and Shop Page
 export const addCart = (product) => {
     return(dispatch, getState, { getFirebase }) => {
         const firestore = getFirebase().firestore();
+        const CurrentCount = product.Count;
         firestore
-            .collection('cart')
-            .add(product)
+            .collection('product')
+            .doc(product.id)
+            .set({
+                ...product,
+                Count: CurrentCount+1,
+                InCart: true
+            })
             .then(() => {
                 dispatch({
                     type: "ADD_TO_CART"
@@ -17,4 +24,3 @@ export const addCart = (product) => {
             })
     }
 }
-

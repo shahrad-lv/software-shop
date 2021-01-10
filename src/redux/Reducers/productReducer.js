@@ -6,12 +6,6 @@ const productReducer = (state ={}, action) => {
         case 'ADD_TO_CART_ERR': {
             return state;
         }
-        // case "REMOVE_CART": {
-        //     return state;
-        // }
-        // case "REMOVE_CART_ERR": {
-        //     return state;
-        // }
         default: return state
     }
 }

@@ -63,6 +63,9 @@ export const ProductName = styled(Typography)`
 export const ProductPrice = styled(Typography)`
 `;
 
+export const ProductCount = styled(Typography)`
+`;
+
 export const ProductDelete = styled(Button)`
     border-radius: 0;
     padding: 6px 22px;

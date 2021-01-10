@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { AddToCart ,InfoName, InfoPrice, ProductContainer, ProductImg, ProductInfo } from './Product.elements';
@@ -16,7 +15,7 @@ const Product = ({product}) => {
         <ProductImg src={product.ProductPic} alt=""/>
       <ProductInfo>
       <InfoPrice>
-          {product.ProductPrice}
+           {product.ProductPrice} تومان
         </InfoPrice>
         <InfoName>
           {product.ProductName}
@@ -28,3 +27,4 @@ const Product = ({product}) => {
 }
 
 export default Product
+

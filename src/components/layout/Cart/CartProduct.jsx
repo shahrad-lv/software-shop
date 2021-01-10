@@ -1,23 +1,25 @@
 import React from 'react'
-import { ProductContent, ProductPic, ProductContainer, ProductDelete,ProductName, ProductPrice, ProductActions } from './Cart.elements'
+import { ProductContent, ProductPic, ProductContainer, ProductDelete,ProductName,ProductCount, ProductPrice, ProductActions } from './Cart.elements'
 import DeleteIcon from '@material-ui/icons/Delete';
-import { Button } from '@material-ui/core';
-const CartProducts = ({cart}) => {
+
+const CartProduct = ({product}) => {
 
     return (
       <ProductContainer>
         <ProductContent>
-          <ProductName>{cart.ProductName}</ProductName>
-          <ProductPrice>قیمت : {cart.ProductPrice}</ProductPrice>
+          <ProductName>{product.ProductName}</ProductName>
+          <ProductPrice>قیمت : {product.ProductPrice}</ProductPrice>
+          <ProductCount>تعداد : {product.Count} </ProductCount>
           <ProductActions>
             <ProductDelete variant="outlined" color="secondary" endIcon={<DeleteIcon />}>
               حذف
             </ProductDelete>
           </ProductActions>
         </ProductContent>
-        <ProductPic src={cart.ProductPic} />
+        <ProductPic src={product.ProductPic} />
       </ProductContainer>
     )
+
 }
 
-export default CartProducts
+export default CartProduct

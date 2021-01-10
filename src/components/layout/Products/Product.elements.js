@@ -63,7 +63,7 @@ export const ProductInfo = styled(Typography)`
             bottom: 7rem;
         }
         @media ${device.laptopL} {
-            left:18%;
+            left:14%;
             bottom: 5rem;
         }
 `;

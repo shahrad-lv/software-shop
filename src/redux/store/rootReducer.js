@@ -4,6 +4,7 @@ import { firestoreReducer } from 'redux-firestore'
 import navbarReducer from "../Reducers/navbarReducer";
 import skillReducer from "../Reducers/skillReducer";
 import productReducer from '../Reducers/productReducer'
+
 const rootReducer = combineReducers({
     firebase : firebaseReducer,
     firestore : firestoreReducer,

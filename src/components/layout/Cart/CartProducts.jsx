@@ -1,17 +1,19 @@
 import React from 'react'
-import CartProducts from './CartProduct'
+import CartProduct from './CartProduct'
 import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { useSelector } from 'react-redux';
-import { CartContainer, ProductItem } from './Cart.elements';
-import { Grid } from '@material-ui/core';
+import { ProductItem } from './Cart.elements';
 
-const Cart = () => {
-    const carts = useSelector(state => state.firestore.ordered.cart);
+const CartProducts = () => {
+    const products = useSelector(state => state.firestore.ordered.product);
+    
     return (
         <ProductItem item sm={8}>
-          {carts && carts.map(cart => (
-              <CartProducts cart={cart} key={cart.id}/>
+          {products && products.map(product => (
+                product.InCart && (
+                  <CartProduct product={product} key={product.id}/>
+                )
           ))}
         </ProductItem>
     )
@@ -20,8 +22,8 @@ const Cart = () => {
 export default compose(
     firestoreConnect(ownProps => [
       {
-        collection: "cart",
-        orderBy: ['type']
+        collection: "product",
+        orderBy: ['InCart']
       }
     ])
-  )(Cart)
+  )(CartProducts)
