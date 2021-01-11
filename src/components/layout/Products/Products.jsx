@@ -13,7 +13,6 @@ import Slider from "react-slick";
 const Products = () => {
 
     const products = useSelector(state => state.firestore.ordered.product);
-
     const settings = {
       dots: false,
       infinite: true,
@@ -35,7 +34,6 @@ const Products = () => {
         breakpoint: 600,
         settings: {
              slidesToShow: 1,
-             dots: true
         }
 
    }, {

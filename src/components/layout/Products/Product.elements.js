@@ -2,6 +2,7 @@ import { Button, Typography } from '@material-ui/core';
 import styled from 'styled-components'
 import theme from '../../../theme/material-ui.theme'
 import { device } from "../../../theme/device";
+import { Link } from 'react-router-dom';
 export const ShopContainer = styled.div`
     width: 100%;
     background: ${(props) => theme.palette.primary.main};
@@ -21,9 +22,7 @@ export const ProductContainer = styled.div`
     position: relative;
     cursor: pointer;
 `;
-
-export const ProductImg = styled.img`
-    background: linear-gradient(45deg,#404040,#cccccc);
+export const ImgLink = styled(Link)`
     @media ${device.mobileS} {
         width: 53%;
         height: 53%;
@@ -40,6 +39,12 @@ export const ProductImg = styled.img`
         width: 80%;
         height: 80%;
     }
+`;
+
+export const ProductImg = styled.img`
+    background: linear-gradient(45deg,#404040,#cccccc);
+    width: 100%;
+    height: 100%;
 `;
 export const ProductInfo = styled(Typography)`
         position: absolute;
@@ -88,6 +93,12 @@ export const InfoPrice = styled(Typography)`
         margin-left: 4px;
     }
 `;
+export const Actions = styled.div`
+    display: flex;
+    /* width: 60%; */
+    justify-content: space-between;
+    align-items: center;
+`;
 
 export const AddToCart = styled(Button)`
     border-radius: 0;
@@ -95,19 +106,24 @@ export const AddToCart = styled(Button)`
     @media ${device.mobileS} {
         padding: 5px 13px;
         font-size: .8rem;
-        margin-bottom: 2rem;
     }
     @media ${device.mobileL} {
         margin-bottom: 0rem;
     }
     @media ${device.laptop} {
         padding: 5px 17px;
-        margin-bottom: 2rem;
         font-size: .9rem;
     }
     @media ${device.laptopL} {
         padding: 5px 18px;
-        margin-bottom: 0rem;
         font-size: .9rem;
+    }
+`;
+
+export const LaunchButton = styled(Button)`
+    width: 0px;
+    height: 0px;
+    &:hover{
+        background: none;
     }
 `;

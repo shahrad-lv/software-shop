@@ -8,8 +8,7 @@ import styled from 'styled-components'
 import { AppProvider } from './theme/globalStyle'
 import Shop from './components/layout/Shop';
 import Cart from './components/layout/Cart';
-
-
+import ProductDetail from './components/layout/Product Detail/ProductDetail';
 
 function App() {
 
@@ -23,6 +22,7 @@ function App() {
             <Route path='/about'component={About} />
             <Route path='/shop'component={Shop} />
             <Route path='/cart'component={Cart} />
+            <Route path='/product/:productId'component={ProductDetail} />
         </Switch>
       </AppProvider>
       <Footer />

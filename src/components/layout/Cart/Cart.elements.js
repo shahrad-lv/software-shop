@@ -1,7 +1,8 @@
 import { Button, ButtonGroup, Grid, Typography } from '@material-ui/core';
-import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+import styled, { ThemeConsumer } from 'styled-components'
 import { device } from "../../../theme/device";
-
+import theme from '../../../theme/material-ui.theme'
 export const GridContainer = styled(Grid)`
     display: flex;
     justify-content: center;
@@ -83,8 +84,10 @@ export const ProductContent = styled.div`
     }
 `;
 
-export const ProductName = styled(Typography)`
+export const ProductName = styled(Link)`
     font-size: 1rem;
+    text-decoration: none;
+    color: ${(props) => theme.palette.primary.contrastText};
     @media ${device.tablet}{
         font-size: 1.1rem
     }

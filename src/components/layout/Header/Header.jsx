@@ -19,7 +19,7 @@ const Header = () => {
           parent: container.current,
           intensity: 1,
           image1: compostions1,
-          image2: name  == '/' ? Home : name == '/shop' ? Shop : Home,
+          image2: name  == '/' ? Home : name == '/shop' || '/product' ? Shop : Home,
           displacementImage: displacement,
           imagesRatio: .55,
           speedIn: .9,
@@ -42,7 +42,7 @@ const Header = () => {
         <HeaderContainer>
             <DistortionContainer id="imgContainer" ref={container} />
             <HeaderContent>
-                <PageNameLine><PageName className='HeaderTitle'> {name  == '/' ? 'Home' : name == '/about' ? 'About' : name == '/shop' ? 'Shop' : 'Cart'} Page  </PageName></PageNameLine>
+                <PageNameLine><PageName className='HeaderTitle'> {name  == '/' ? 'Home' : name == '/about' ? 'About' : name == '/shop' ? 'Shop' : name == '/cart' ? 'Cart' : 'Product'} Page  </PageName></PageNameLine>
                 <Line><Title className='HeaderTitle'>React</Title></Line>
                 <Line><Title className='HeaderTitle'>Software Shop</Title></Line>
                 <DescriptionLine>

@@ -12,6 +12,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import NumberFormat from 'react-number-format';
+import {Link} from 'react-router-dom'
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -49,7 +50,7 @@ const CartProduct = ({product}) => {
     : setOpenRemove(true)
   }
 
-
+  const linkAddress = `/product/${product.id}`;
 
     return (
       <>
@@ -86,7 +87,9 @@ const CartProduct = ({product}) => {
 
       <ProductContainer>
         <ProductContent>
-          <ProductName>{product.ProductName}</ProductName>
+
+          
+          <ProductName to={linkAddress}>{product.ProductName}</ProductName>
           <ProductNameIR>{product.ProductNameIR}</ProductNameIR>
 
           <ProductPrice>
@@ -110,7 +113,9 @@ const CartProduct = ({product}) => {
             </ProductDelete>
           </ProductActions>
         </ProductContent>
-        <ProductPic src={product.ProductPic} />
+        <Link to={linkAddress}>
+          <ProductPic src={product.ProductPic} title={product.ProductName}/>
+        </Link>
       </ProductContainer>
       </>
 
