@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { ProductContent, ProductPic, ProductContainer, ProductDelete,ProductName,ProductCount, ProductPrice, ProductActions, ProductIncrease, ProductDecrease } from './Cart.elements'
+import { ProductContent, ProductPic, ProductContainer, ProductDelete,ProductName, ProductNameIR,ProductCount, ProductPrice,ProductDiscount, ProductActions, ProductIncrease, ProductDecrease, Tag } from './Cart.elements'
 import DeleteIcon from '@material-ui/icons/Delete';
 import { removeCart, Increase, Decrease } from "../../../redux/Actions/cartAction";
 import { ButtonGroup } from '@material-ui/core';
@@ -11,6 +11,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
+import NumberFormat from 'react-number-format';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -82,10 +83,22 @@ const CartProduct = ({product}) => {
           </Button>
         </DialogActions>
       </Dialog>
+
       <ProductContainer>
         <ProductContent>
           <ProductName>{product.ProductName}</ProductName>
-          <ProductPrice>قیمت : {product.ProductPrice}</ProductPrice>
+          <ProductNameIR>{product.ProductNameIR}</ProductNameIR>
+
+          <ProductPrice>
+            <Tag> : قیمت  </Tag>
+            <NumberFormat value={product.ProductPrice} displayType={'text'} thousandSeparator={true} renderText={value => <div style={{display: 'flex', flexDirection: 'row-reverse'}}><span>{value}</span>تومان</div>} />
+          </ProductPrice>
+          {product.Discount &&
+            <ProductDiscount>
+              <Tag> : تخفیف  </Tag>
+              <NumberFormat value={product.Discount} displayType={'text'} thousandSeparator={true} renderText={value => <div style={{display: 'flex', flexDirection: 'row-reverse'}}><span>{value}</span>تومان</div>} />
+            </ProductDiscount>
+          }
           <ProductCount>تعداد : {product.Count} </ProductCount>
           <ProductActions>
             <ButtonGroup size="large" color="secondary" aria-label="button group">

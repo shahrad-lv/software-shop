@@ -28,14 +28,6 @@ export const ProductItem = styled(Grid)`
     }
 `;
 
-export const PaymentItem = styled(Grid)`
-    background: #040925;
-    border: 1px solid #fff;
-    box-shadow: 0 0 5px #fff;
-    padding: 3em;
-    color: #fff;
-    max-height: 70vh;
-`;
 
 
 export const ProductContainer = styled.div`
@@ -43,20 +35,29 @@ export const ProductContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     background: #040925;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #fff;
+    margin-bottom: 6rem;
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to left, transparent, #fff, transparent);
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+    }
     &:last-of-type{
-        border-bottom: none;
-        margin-bottom: 0rem;
-        padding-bottom: 0rem;
+        margin-bottom: 0;
+        &::before{
+            content: none;
+        }
     }
 `;
 
 export const ProductPic = styled.img`
     width: 155px;
     height: 170px;
-    background: linear-gradient(45deg,#404040,#cccccc);
+    background: linear-gradient(45deg,#666666,#cccccc);
 
     @media ${device.tablet}{
         width: 180px;
@@ -83,19 +84,44 @@ export const ProductContent = styled.div`
 `;
 
 export const ProductName = styled(Typography)`
-    margin-bottom: 1rem;
     font-size: 1rem;
     @media ${device.tablet}{
         font-size: 1.1rem
     }
 `;
+export const ProductNameIR = styled(Typography)`
+    margin-bottom: 2rem;
+    font-size: .9rem;
+    opacity: 0.7;
+    @media ${device.tablet}{
+        font-size: .95rem
+    }
+`;
 
 export const ProductPrice = styled(Typography)`
     font-size: .9rem;
+    display: flex;
+    flex-direction: row-reverse;
+    span {
+        margin-left: 4px;
+    }
     @media ${device.tablet}{
         font-size: 1rem;
     }
 `;
+
+export const ProductDiscount = styled(Typography)`
+    font-size: .9rem;
+    display: flex;
+    flex-direction: row-reverse;
+    span {
+        margin-left: 4px;
+    }
+    @media ${device.tablet}{
+        font-size: 1rem;
+    }
+`;
+
 
 export const ProductCount = styled(Typography)`
     font-size: .9rem;
@@ -112,6 +138,7 @@ export const ProductActions = styled.div`
     @media ${device.tablet}{
         display: flex;
         margin-top: 2rem;
+        justify-content: space-around;
     }
 `;
 
@@ -148,3 +175,73 @@ export const ProductDecrease = styled(Button)`
 `;
 
 
+// Payment
+
+export const PaymentItem = styled(Grid)`
+    background: #040925;
+    box-shadow: 0 0 5px #fff;
+    padding: 2.5em;
+    color: #fff;
+    height: 45vh;
+    position: relative;
+`;
+
+
+
+
+export const Tag = styled(Grid)`
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    span{
+        font-size: .77rem;
+    }
+    @media ${device.tablet}{
+        font-size: 1.1rem;
+    }
+    @media ${device.laptopL}{
+        font-size: 1rem;
+    }
+`;
+
+
+export const Pay = styled(Grid)`
+    display: flex;
+    font-size: 1rem;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    span {
+        margin-left: 4px;
+    }
+    @media ${device.tablet}{
+        font-size: 1.1rem;
+    }
+    @media ${device.laptopL}{
+        font-size: 1rem;
+    }
+`;
+
+export const Price = styled(Pay)`
+    margin-bottom: 1rem;
+`;
+
+export const Discount = styled(Pay)`
+    margin-bottom: 3rem;
+    position: relative;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to left, transparent, #fff, transparent);
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+    }
+`;
+
+export const Finalize = styled(Button)`
+    border-radius: 0;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+`;

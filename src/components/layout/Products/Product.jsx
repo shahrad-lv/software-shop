@@ -7,8 +7,8 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
+import NumberFormat from 'react-number-format';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -46,14 +46,14 @@ const Product = ({product}) => {
       <ProductContainer>
           <ProductImg src={product.ProductPic} alt=""/>
         <ProductInfo>
-        <InfoPrice>
-            {product.ProductPrice} تومان
+          <InfoPrice>
+              <NumberFormat value={product.ProductPrice} displayType={'text'} thousandSeparator={true} renderText={value => <div style={{display: 'flex', flexDirection: 'row-reverse', justifyContent: 'flex-end'}}><span>{value}</span>تومان</div>} />
           </InfoPrice>
           <InfoName>
-            {product.ProductName}
+              {product.ProductName}
           </InfoName>
-          </ProductInfo>
-          <AddToCart onClick={() => handleAdd(product)} variant='outlined' color='secondary'> افزودن به سبد خرید</AddToCart>
+        </ProductInfo>
+        <AddToCart onClick={() => handleAdd(product)} variant='outlined' color='secondary'> افزودن به سبد خرید</AddToCart>
       </ProductContainer>
     </>
 

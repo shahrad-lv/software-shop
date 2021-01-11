@@ -21,7 +21,7 @@ export default  createMuiTheme({
       values : {
         xs: 0,
         sm: 800,
-        md: 1200,
+        md: 1440,
         lg: 1590,
         xl: 1920,
       }

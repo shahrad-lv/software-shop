@@ -1,5 +1,4 @@
 import { Button, Typography } from '@material-ui/core';
-import Slider from 'react-slick';
 import styled from 'styled-components'
 import theme from '../../../theme/material-ui.theme'
 import { device } from "../../../theme/device";
@@ -85,6 +84,9 @@ export const InfoName = styled(Typography)`
 export const InfoPrice = styled(Typography)`
     color: #fff;
     margin-bottom: .5rem;
+    span{
+        margin-left: 4px;
+    }
 `;
 
 export const AddToCart = styled(Button)`
