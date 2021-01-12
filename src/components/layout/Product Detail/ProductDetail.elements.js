@@ -1,8 +1,8 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components'
 import theme from '../../../theme/material-ui.theme'
 import {device} from '../../../theme/device'
-import { Tag, Pay , GridContainer} from '../Cart/Cart.elements'
+import { Tag, Pay , GridContainer, ProductDecrease, ProductIncrease} from '../Cart/Cart.elements'
 
 
 export const Container = styled(GridContainer)`
@@ -13,19 +13,21 @@ export const Container = styled(GridContainer)`
 export const DetailContainer = styled(Grid)`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 1fr 30px;
+    grid-template-rows: 50px 1fr .6fr 40px;
     grid-template-areas: "Name Name Name"
                                       ". Pic ."
-                                      " Costs Costs Costs";
+                                      " Costs Costs Costs"
+                                      ". Action Action";
                                     
     /* padding: 10rem 0;
     background: #fff; */
     @media ${device.laptop}{
         grid-template-columns: 1fr 1.5fr 1fr;
-        grid-template-rows: 50px 1.6fr 1fr;
+        grid-template-rows: 50px 1.6fr 3fr 40px;
         grid-template-areas: ". . Pic"
                                          ". Name ."
                                          ". Costs ."
+                                         ". Action ."
     }
     @media ${device.laptopL}{
         grid-template-columns: 1fr .7fr 1fr;
@@ -87,7 +89,7 @@ export const Costs = styled.div`
         height: 1px;
         background: linear-gradient(to left, transparent, #000, transparent);
         position: absolute;
-        bottom: 40px;
+        bottom: 210px;
         left: 0;
     }
     @media ${device.laptop}{
@@ -98,14 +100,51 @@ export const Costs = styled.div`
     }
 `;
 
+export const DetailCount = styled(Pay)`
+    margin-top: 2rem;
+`;
+
 export const DetailPrice = styled(Pay)`
     width: 100%;
 `;
 
-export const DetailDiscount = styled(DetailPrice)`
+export const DetailDiscount = styled(DetailPrice)``;
 
+export const DetailTag = styled(Tag)``;
+
+export const ActionDetail = styled.div`
+    grid-area: Action;
+    display: flex;
+    @media ${device.laptop}{
+        justify-content: flex-end;
+    }
+`
+
+export const DetailIncrease = styled(ProductIncrease)`
+    border-radius: 0;
+    padding: 20px 13px;
+    margin-bottom: 1rem;
+    @media ${device.laptopL}{
+        padding: 6px 22px;
+    }
+    @media ${device.tablet}{
+        margin-bottom: 0rem;
+    }
 `;
 
-export const DetailTag = styled(Tag)`
-    
+export const DetailDecrease = styled(ProductDecrease)`
+    border-radius: 0;
+    padding: 20px 13px;
+    margin-bottom: 1rem;
+    @media ${device.laptopL}{
+        padding: 6px 22px;
+    }
+    @media ${device.tablet}{
+        margin-bottom: 0rem;
+    }
+`;
+
+export const DetailAdd = styled(Button)`
+    border-radius: 0;
+    margin-left: 3rem;
 `;
