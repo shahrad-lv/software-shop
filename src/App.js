@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter ,BrowserRouter, Switch, Route } from 'react-router-dom';
 import Footer from './components/layout/Footer/Footer';
 import Navbar from './components/layout/Navbar/Navbar';
 import Home from './components/layout/Home';
@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <AppProvider id='background'>
         <Switch>
@@ -26,7 +26,7 @@ function App() {
         </Switch>
       </AppProvider>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
